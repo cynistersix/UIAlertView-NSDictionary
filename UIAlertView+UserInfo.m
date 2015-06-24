@@ -24,4 +24,8 @@ static const void *UIAlertViewUserInfoKey                        = &UIAlertViewU
     objc_setAssociatedObject(self, UIAlertViewUserInfoKey, userInfo, OBJC_ASSOCIATION_RETAIN);
 }
 
+- (void)dealloc {
+    [self setUserInfo:nil];
+}
+
 @end
